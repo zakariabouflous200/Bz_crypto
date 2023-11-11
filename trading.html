@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
+
+    <title>Bz Crypto</title>
+    <script src="header-color.js"></script>
+    <script src="toggle_button.js"></script>
+    <link rel="stylesheet" type="text/css" href="trading.css">
+    <title>Trading - Bz Crypto</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Bz Crypto</a></div>
+            <ul class="links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#">Trading</a></li>
+                <li class="dropdown"><a href="#" class="login"><i class='bx bxs-user-circle login-logo'></i></a>
+                    <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            <div class="dropdown_menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="trading.html">Trading</a></li>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="trade">
+            <h1>Trade Maker</h1>
+        
+            <div class="form-trans">
+                <h2>Cryptomonnaie en Temps Réel</h2>
+                <p><span id="selected-crypto">Sélection : </span> en USD : <span id="crypto-price">$0.00</span></p>
+                <h2>Effectuer une Transaction</h2>
+
+                <form id="transaction-form">
+                    <label for="crypto">Cryptomonnaie :</label>
+                    <select id="crypto" required>
+                    
+                    </select>
+                    <br>
+
+                    <label for="amount">Montant :</label><br>
+                    <input type="number" id="amount" required>
+                    <br>
+
+                    <label for="recipient">Destinataire :</label>
+                    <input type="text" id="recipient" required>
+                    <br>
+
+                    <button type="submit">Effectuer la Transaction</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="trading.js"></script>
+
+    <section id="transaction">
+        <div class="trans-history">
+            <h2>Historique des Transactions</h2>
+            <table id="transaction-history">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Crypto</th>
+                        <th>Price</th>
+                        <th>Destination</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>WebSite Platform Developped By <a href="index.html">Zakariae Bouflous ©</a></p>
+    </footer>
+    
+</body>
+</html>

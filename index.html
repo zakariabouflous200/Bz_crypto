@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
+
+    <title>Bz Crypto</title>
+    <script src="header-color.js"></script>
+    <script src="toggle_button.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Bz Crypto</a></div>
+            <ul class="links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="trading.html">Trading</a></li>
+                <li class="dropdown"><a href="#" class="login"><i class='bx bxs-user-circle login-logo'></i></a>
+                    <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            <div class="dropdown_menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="trading.html">Trading</a></li>
+        </div>
+    </header>
+
+
+    <section id="home">
+        <div id="home-content">
+            <div class="home-content-infos animate-up-down">
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">Bz Crypto</span>
+                    </span>
+                </h1>
+                <p class="ml9">
+                    <span class="text-wrapper">
+                      <span class="letters">Welcome to our cutting-edge trading platform, 
+                        where opportunities meet innovation. Whether you're an experienced trader or just starting your journey in the world 
+                        of financial markets, we've designed a user-friendly and feature-rich environment to empower your trading ambitions.
+                        With real-time data, powerful analysis tools, and lightning-fast execution</span>
+                    </span>
+                </p>
+                <button> Learn More </button>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="animated.js"></script>
+
+    <section id="crypto">
+        <div class="crypto-heading">
+            <p>Here, you can effortlessly track and deepen your understanding of cryptocurrencies. Our platform offers comprehensive real-time data, 
+                insightful analytics
+                , and educational resources to help you stay informed and make informed decisions in the dynamic world of digital assets.</p>
+        </div>
+        <div class="crypto-content">
+            <table id="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Price (USD)</th>
+                        <th>Market Cap (USD)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="crypto-details" style="display: none;">
+            <h2 id="crypto-name"></h2>
+            <p>Symbol: <span id="crypto-symbol"></span></p>
+            <p>Actual Price : <span id="crypto-price"></span></p>
+            <p>Bourse Capitalisation : <span id="crypto-market-cap"></span></p>
+            
+        </div>
+        <canvas id="crypto-chart" class="animate-up-down" ></canvas>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="coinGeko.js"></script>
+    
+
+    <section id="contact">
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="form-container">
+            <form class="form">
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required="">
+              </div>
+              <div class="form-group">
+                <label for="textarea">How Can We Help You?</label>
+                <textarea name="textarea" id="textarea" rows="10" cols="50" required="">          </textarea>
+              </div>
+              <button class="form-submit-btn" type="submit">Submit</button>
+            </form>
+          </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+        <p>WebSite Platform Developped By <a href="index.html">Zakariae BOUFLOUS ©</a></p>
+    </footer>
+    
+</body>
+</html>

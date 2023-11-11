@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: relative;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    transition: color 2.5s; 
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+header li{
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header:hover{
+    color: #533c92;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle_btn:hover {
+    scale: .05;
+    color: var(--bg-color);
+}
+
+.action_btn {
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+
+footer {
+    background-color: #533c92;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    color: white;
+}
+
+footer p a {
+    color: white;
+}
+
+footer a:hover {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    background: rgba(251, 250, 250, 0.554);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    margin-left: -2.5rem;
+    box-shadow: 0 0 20px #533c92;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    scale: 1.2;
+    color: rgb(100, 61, 136);
+}
+
+
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+}
+
+
+html {
+    background-color: #6ebdff;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-color: white;
+    --sec-text-color: black;
+    --third-text-color: orange;
+    --bg-color: #ffa600;
+    --footer-bg: rgb(100, 61, 136);
+}
+
+span {
+    color: rgb(100, 61, 136);
+}
+
+
+section {
+    min-width: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.login {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+section#home { 
+    display: flex;
+    padding: 0 9%;
+    background-image: url("src/CryptoProjectIMG/home.jpg");
+    background-repeat: no-repeat;
+    background-position: 40rem 5rem ;
+    background-size: 50rem;
+    height: 100vh;
+}
+
+.home-content {
+    display: flex;    
+}
+
+.home-content-infos {
+    max-width: 30rem;
+    margin-top: 10rem;
+    margin-right: 10rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    box-shadow: 0 0 30px 10px #533c92;
+    text-align: center;
+    padding: 10px;
+}
+
+.home-img img {
+    width: 60%;
+}
+
+.ml11 {
+    font-weight: 700;
+    font-size: 3.5em;
+}
+  
+.ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+  
+.ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+}
+  
+.ml11 .line1 { 
+    top: 0; 
+    left: 0;
+}
+  
+.ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+    color: wheat;
+}
+
+.ml9 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1.2rem;
+  }
+  
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+    color: white;
+    letter-spacing: 0.1rem;
+
+}
+
+.animate-up-down {
+    animation: moveUpDown 2.4s ease infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+
+
+
+.home-content-infos button {
+    font-size: 16px;
+    padding: 1em 3.3em;
+    transform: perspective(200px) rotateX(15deg);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #533c92 0%, #8a67eb 100%);
+    box-shadow: rgba(63,94,251,0.2) 0px 40px 29px 0px;
+    will-change: transform;
+    transition: all 0.3s;
+    border-bottom: 2px solid #845feb;
+}
+
+.home-content-infos button:hover {
+    transform: perspective(180px) rotateX(30deg) translateY(2px);
+}
+    
+.home-content-infos button:active {
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
+}
+
+
+section#crypto { 
+    display: block;
+    align-items: center;
+    padding: 0 9%;
+    height: 260vh;
+    background-color: white;
+}
+
+.crypto-content {
+    margin-bottom: 2rem;
+}
+
+.crypto-heading {
+    background-image: url("src/CryptoProjectIMG/laptop_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 3rem;
+}
+
+.crypto-heading p {
+    position: relative;
+    top: 20rem;
+    left: 5rem;
+    color: rgb(83, 80, 80);
+    font-size: 1rem;
+    font-style: oblique;
+    max-width: 20rem;
+}
+
+#crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#crypto-table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#crypto-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: black;
+}
+
+#crypto-table th {
+    background-color: #f2f2f2;
+}
+
+#crypto-chart {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    border: #212121;
+    border-radius: 15px;
+    box-shadow: 0 0 30px 10px gray;
+}
+
+
+
+
+
+section#about {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    height: 100vh;
+}    
+
+section#stories {
+    padding: 0 9%;
+    height: 150vh;
+    background-color: white;
+}
+
+.stories-content {
+    max-width: 60rem;
+}
+
+.stories-content h1 {
+    font-size: 2rem;
+    position: relative;
+    top: 5rem;
+}
+
+
+/* Contact */
+
+
+section#contact {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background-color: black;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.contact-content {
+    max-width: 60rem;
+}
+
+.contact-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    color: #8a67eb;
+}
+
+.form-container {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: white;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: rgb(100, 61, 136);
+    border-color: rgb(100, 61, 136)ff;
+  }
+
+  
+  
+  

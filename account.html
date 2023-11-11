@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
+
+    <script src="toggle_button.js"></script>
+    <link rel="stylesheet" type="text/css" href="register.css">
+
+    <title>Register</title>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Bz Crypto</a></div>
+            <ul class="links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="trading.html">Trading</a></li>
+                <li class="dropdown"><a href="#" class="login"><i class='bx bxs-user-circle login-logo'></i></a>
+                    <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            <div class="dropdown_menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#crypto">Market</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="trading.html">Trading</a></li>
+        </div>
+    </header>
+
+    <section id="register">
+        <div class="form_content_register">
+            <h1 class="headingh1">Register</h1>
+            <form class="form" id="register-form" method="POST">
+                <p class="title">Register </p>
+                <p class="message">Signup now and get full knowledge about trading<br>Track your Crypto in live ! </p>
+                    <div class="flex">
+                    <label>
+                        <input id="firstname" required="" placeholder="" type="text" class="input">
+                        <span>Firstname</span>
+                    </label>
+            
+                    <label>
+                        <input id="lastname" required="" placeholder="" type="text" class="input">
+                        <span>Lastname</span>
+                    </label>
+                </div>  
+                        
+                <label>
+                    <input id="email" required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label> 
+                    
+                <label>
+                    <input id="password" required="" placeholder="" type="password" class="input">
+                    <span>Password</span>
+                </label>
+                <label>
+                    <input id="confirm-password" required="" placeholder="" type="password" class="input">
+                    <span>Confirm password</span>
+                </label>
+                <button class="submit" id="register-button">Sing Up</button>
+                <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+            </form>
+        </div>
+        <div class="form_content_login">
+            <h1 class="headingh1">Login</h1>
+            <form class="form" id="login-form" method="POST">
+                <p class="title">Login </p>
+                <p class="message">Sign to acces to your Crypto ! </p>
+
+                <label>
+                    <input id="login-email" required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label> 
+                    
+                <label>
+                    <input id="login-password" required="" placeholder="" type="password" class="input">
+                    <span>Password</span>
+                </label>
+
+                <button class="submit" id="login-button">Sing In</button>
+                <p class="signin">Don't have an acount ? <a href="#">Sign Up</a> </p>
+            </form>
+        </div>
+    </section>
+    <script src="account.js"></script>
+
+
+    
+    
+
+    <footer>
+        <p>WebSite Platform Developped By <a href="index.html">Zakariae Bouflous ©</a></p>
+    </footer>
+
+</body>
+</html>
